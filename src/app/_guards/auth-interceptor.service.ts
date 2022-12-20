@@ -27,7 +27,7 @@ export class AuthInterceptorService implements HttpInterceptor {
                         // Catching Error Stage
                         if (error && error.status === 401) {
                             this.authenticateService.logout();
-                            this.router.navigate(['signin']);
+                            this.router.navigate(['Login']);
                         }
                         const err = error.error.message || error.statusText;
                         return throwError(error); // any further errors are returned to frontend                    

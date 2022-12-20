@@ -2,7 +2,8 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/cor
 import { CommonModule } from '@angular/common';
 import { NavbarRoutingModule } from './navbar-routing.module';
 import { NavbarComponent } from './navbar.component';
-import { AllMaterialModule } from 'src/app/_shared/allmaterials.module';
+import { ItemResolver } from './_resolvers/item.resolver';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,12 +13,12 @@ import { AllMaterialModule } from 'src/app/_shared/allmaterials.module';
   imports: [
     CommonModule,
     NavbarRoutingModule,
-    AllMaterialModule
+    FormsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  providers: [],
+  providers: [ItemResolver],
 })
 export class NavbarModule { }

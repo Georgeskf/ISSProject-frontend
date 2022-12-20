@@ -1,0 +1,454 @@
+
+
+:host ::ng-deep {
+   
+    .topdiv1{
+        float: left;
+         text-align: start;
+    }
+}
+
+:host ::ng-deep .app-btn {
+    height: 32px;
+    width: 110px;
+    background: #79d1f1;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    
+}
+
+// :host ::ng-deep .side-bar-wrapper{
+   
+// }
+
+// :host ::ng-deep .div{
+//     height: 32px;
+//     width: 110px;
+//     background: #79d1f1;
+//     border: none;
+//     color: #fff;
+//     outline: none;
+//     cursor: pointer;
+//     border-radius: 2px;
+// }
+:host ::ng-deep .filter-list-wrapper {
+    width: 50% !important;
+    position: absolute;
+    right: 0;
+    
+   
+
+}
+
+:host ::ng-deep .vl {
+    height: 200px;
+    left: 50% !important;
+    margin-left: -4px;
+    margin-top: 48px !important ;
+    position: absolute ;
+    
+}
+
+
+
+// :host ::ng-deep  .filter-data-list-scroll-2 {
+//     max-height: 35px;
+//     overflow-y: scroll;
+//     padding: 10px;
+// }
+
+// :host ::ng-deep  .div {
+//     max-height: 35px;
+//     overflow-y: scroll;
+//     padding: 10px;
+//     background-color: #007bff;
+// }
+
+:host ::ng-deep .ele {
+    -webkit-animation: fadeIn .3s;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn .3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    height: 270px !important ;
+   
+}
+
+:host ::ng-deep .filter-data-list-scroll-2 {
+    max-height: 170px !important;
+    overflow-y: scroll;
+    padding: 10px;
+}
+:host ::ng-deep .p-fluid .p-dialog-footer .p-button {
+    width: auto;
+    margin-bottom: 50px;
+    background-color: white;
+    border-color: transparent;
+}
+
+:host ::ng-deep .main-body {
+    // display: flex;
+    width: 150px !important;
+    
+    // position: absolute;
+    // right: 150px;
+}
+
+:host ::ng-deep  .modalbody {
+   width: 300px !important;
+   right: 20px
+}
+
+:host ::ng-deep .reset-filter {
+    color: #79d1f1 !important;
+    margin-right: 10px;
+}
+
+:host ::ng-deep .filter-side-menu .side-menu-tabs.selected {
+    color: #79d1f1 !important;
+}
+
+:host ::ng-deep .filter-search-option{
+    border: none;
+    border-bottom: 1px solid #79d1f1 !important;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    outline: none;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    width: -webkit-fill-available;
+}
+
+:host ::ng-deep .filter-search-option {
+    border: none;
+    border-bottom: 1px solid #f28100;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    outline: none;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    width: -webkit-fill-available;
+    margin-bottom: 20px !important;
+}
+
+:host ::ng-deep .filter-data-list .filter-content.selected{
+    background-color: #f1f1f1;
+    color: #79d1f1 !important;
+}
+
+
+:host ::ng-deep .fa-filter:before {
+    content: "\f0b0";
+    color: #79d1f1;
+}
+
+.p-component,
+.p-component * {
+    box-sizing: border-box;
+}
+
+// :host ::ng-deep .side-menu-tabs[_ngcontent-lly-c462] {
+//     ba: #4df200;
+// }
+
+
+
+
+
+
+:host ::ng-deep {
+    .p-dropdown {
+        width: 14rem;
+        font-weight: normal;
+    }
+
+    .doctor-name {
+        color: #79d1f1;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .doctor-description {
+        margin-left: 75px;
+        margin-bottom: 80px;
+        width: 310px;
+        height: 100px;
+    }
+
+    .doctor-specialty {
+        font-weight: 500;
+        vertical-align: top;
+    }
+
+    .product-list-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+
+        img {
+            width: 150px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .product-list-detail {
+            flex: 1 1 0;
+        }
+
+        .p-rating {
+            margin: 0 0 0.5rem 0;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            align-self: flex-end;
+        }
+
+        .product-list-action {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p-button {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .product-grid-item {
+        margin: 0.5em;
+        border: 1px solid #dee2e6;
+
+        .product-grid-item-top,
+        .product-grid-item-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .p-avatar {
+            margin: 0;
+            border-radius: 50%;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}
+.doctor-email {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.doctor-phone {
+    margin-top: 5px;
+
+    font-size: 12px;
+}
+.card {
+    min-width: 300px;
+    padding: 1rem;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+.divemail {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    display: flex;
+
+    margin-bottom: 5px;
+    margin-left: 80px;
+}
+.divphone {
+    position: absolute;
+    right: 175px;
+    bottom: 10px;
+
+    display: flex;
+
+    margin-bottom: 5px;
+    margin-left: 80px;
+}
+.divphone a {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #79d1f1;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.divphone a .pi {
+    font-size: 15px;
+    line-height: 30px;
+
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+
+.divphone a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, white, white);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.divphone a:hover::after {
+    top: 0;
+}
+
+.divphone a:hover .pi {
+    color: #66a4c2;
+}
+.divemail a {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #79d1f1;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.divemail a .pi {
+    font-size: 15px;
+    line-height: 30px;
+
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+
+.divemail a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, white, white);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.divemail a:hover::after {
+    top: 0;
+}
+
+.divemail a:hover .pi {
+    color: #66a4c2;
+}
+
+@media screen and (max-width: 576px) {
+    .doctor-description {
+        margin-left: 75px;
+        margin-bottom: 100px;
+        width: 200px;
+        height: 150px;
+    }
+
+    :host ::ng-deep .product-list-item {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 75%;
+            margin: 2rem 0;
+        }
+
+        .product-list-action {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-list-action {
+            margin-top: 2rem;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .card {
+        width: 300px;
+        padding: 1rem;
+        box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        margin-bottom: 2rem;
+    }
+}
+
+
+:host ::ng-deep .grid-nogutter {
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 0;
+}
+.button1{
+    margin-right: 150px;
+    background-color: #99ccef;
+    border-color: transparent;
+    height: 40px;
+    border-radius: 3px;
+
+    width: 100px;
+    &:hover{
+        background-color: #abd7f5;
+        border-color: transparent;
+    }
+}
+
+
+.buttondelete{
+    margin-right: 150px;
+    background-color: #e04444;
+    border-color: transparent;
+    border-radius: 3px;
+    height: 40px;
+    width: 100px;
+    &:hover{
+        background-color: #ee7474;
+        border-color: transparent;
+    }
+}
+:host ::ng-deep .p-dialog .p-dialog-header-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+

@@ -19,10 +19,10 @@
             
             
             <img class="logo" src="assets\images\logo.png" alt="GCI Logo" routerLink="/home">
-            <form  (ngSubmit)="signin()">
+            <form [formGroup]="signinForm" (ngSubmit)="login()">
                 <div class="login-form">
                     <div class="group">
-                        <input type="text" class="login-field" value="" placeholder="Username" id="login-name"
+                        <input type="text" class="login-field"  placeholder="Username"  id="login-name" [(ngModel)]="userlogin.Username"
                              formControlName="email" required>
                         <!-- <mat-error
                             *ngIf="signinForm.controls.email.hasError('email') && !signinForm.controls.email.hasError('required')">
@@ -31,18 +31,18 @@
                         <mat-error *ngIf="signinForm.controls.email.hasError('required')">
                             <strong>Email is required</strong>
                         </mat-error> -->
-                        <input type="password" class="login-field" value="" placeholder="Password" id="login-pass"
-                             formControlName="password" required>
+                        <input type="password" class="login-field"  placeholder="Password" id="login-pass"
+                             formControlName="password" [(ngModel)]="userlogin.password" required>
                         <!-- <mat-error *ngIf="signinForm.controls.password.hasError('required')">
                             <strong>
                                 Password is required
                             </strong>
                         </mat-error> -->
-                        <!-- <mat-error *ngIf="signinForm.controls.password.hasError('error_key')">
-                            Wrong email or password
-                        </mat-error> -->
+                        <div *ngIf="isError" class="mb-3 mt-3 text-red-500">
+                            {{error}}
+                        </div>
                     </div>
-                    <button class="btn btn-primary btn-large btn-block" type="submit">SUBMIT</button>
+                    <button class="btn btn-primary btn-large btn-block" type="submit" >SUBMIT</button>
                     
                     <!-- <a  class="btn btn-primary btn-large btn-block"type="submit">SUBMIT</a> -->
                 </div>

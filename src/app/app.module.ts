@@ -3,20 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './modules/navbar/navbar.component';
-import { LoginComponent } from './modules/login/login.component';
-import { RegisterComponent } from './modules/register/register.component';
+import { NavbarModule } from './modules/navbar/navbar.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginModule } from './modules/login/login.module';
+import { RegisterModule } from './modules/register/register.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    RegisterComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginModule,
+    NavbarModule,
+    BrowserAnimationsModule,
+    RegisterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

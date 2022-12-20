@@ -1,0 +1,71 @@
+
+<p-toast></p-toast>
+
+<p-dataView *ngIf='isLogedIn' #dv [value]="Books" [paginator]="true" [rows]="4" filterBy="bookName" layout="grid">
+    <ng-template pTemplate="header">
+        <div class="topdiv1" >
+            
+        </div>
+        <div style="text-align: end; ">
+           
+            <div >
+                <button *ngIf="isLibrerian"  pButton pRipple type="button" label="Add Job"
+                icon="pi pi-plus" class="p-button-raised p-button-text button1" (click)="addBook()"></button>
+            </div>
+
+        </div>
+    </ng-template>
+    <ng-template let-book pTemplate="gridItem">
+        <div class="p-col-12 p-md-1">
+            <div class="product-grid-item card">
+                <div class="product--top">
+                    <div [style]="{'float':'left'}">
+                        <p-avatar image="assets\images\book.jpg" size="xlarge" shape="circle"></p-avatar>
+
+                    </div>
+                    <div style="margin-left:80px;">
+                        <p class="book-name">{{book.bookName}}</p>
+                        <p class="book-specialty">{{book.bookType}}</p>
+                        <p>{{book.country}}</p>
+                    </div>
+                    <div>
+                        <button *ngIf="isLibrerian" pButton pRipple type="button" label="Delete"
+                                icon="pi pi-plus" class="p-button-raised p-button-text buttondelete" (click)="Delete(book.id)"></button>
+                            </div>
+                </div>
+               
+            </div>
+        </div>
+    </ng-template>
+</p-dataView>
+
+<div *ngIf='!isLogedIn'>
+    <h1 style="text-align: center; color: red;">You should login to see the books</h1>
+</div>
+
+<p-dialog [(visible)]="addBookdialog" [style]="{'border-radius':'3px','padding-top':'100px','text-align':'center','align-items':'center',height:'300px',width: '450px','background-color':'#99ccef'}" header="Add New Book" [modal]="true"
+    styleClass="p-fluid">
+    <ng-template pTemplate="content" style="margin-top: 20px;">
+        <div class="field" style="margin-top: 20px;">
+            <label for="type">Book Name*</label>
+            <input type="text" pInputText id="title" [(ngModel)]="Book.BookName" required autofocus />
+            <small class="p-error" *ngIf="submitted && !Book.BookName">Title is required.</small>
+        </div>
+        
+        <div class="field">
+            <label for="type">Book Type*</label>
+            <input type="text" pInputText id="company" [(ngModel)]="Book.BookType" required autofocus />
+            <small class="p-error" *ngIf="submitted && !Book.BookType">Company is required.</small>
+        </div>
+        
+       
+    </ng-template>
+
+    <ng-template pTemplate="footer" style="margin-bottom: 50px;">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" style="margin-right:50px;" class="p-button-text" (click)="hideDialog()"></button>
+        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="save()"></button>
+    </ng-template>
+</p-dialog>
+
+<p-confirmDialog [style]="{width: '450px','background-color':'#99ccef','padding':'20px'}" rejectButtonStyleClass="bg-red-500 border-transparent">
+</p-confirmDialog>

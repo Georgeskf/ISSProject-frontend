@@ -23,7 +23,10 @@ export class AuthenticateService {
         const token = localStorage.getItem(Configs.tokenKey);
         if (token && token.length > 0) {
             let payLoad = atob(token.split('.')[1]);
-            return JSON.parse(atob(token.split('.')[1])).adminType;
+            let ff=JSON.parse(atob(token.split('.')[1]));
+            const decodedRole = ff['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+            return decodedRole;
+
         } else {
             return undefined;
         }

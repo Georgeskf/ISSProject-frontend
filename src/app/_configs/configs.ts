@@ -1,6 +1,6 @@
 import { throwError } from 'rxjs';
 export class Configs {
-    private static APIURL = 'http://localhost:3000/';
+    private static APIURL = 'https://localhost:7045/';
     private static TOKEN_KEY = 'auth-token';
     public static isLoading: Boolean = false;
     public static get apiUrl() {

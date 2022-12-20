@@ -1,1 +1,332 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "~@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$imssociety-primary: mat.define-palette(mat.$indigo-palette);
+$imssociety-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$imssociety-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$imssociety-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $imssociety-primary,
+      accent: $imssociety-accent,
+      warn: $imssociety-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($imssociety-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.p-menubar {
+  height: 5.5rem;
+  width: 100% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  position: sticky;
+  background-color: #79d1f1 !important;
+  align-items: center !important;
+  border: 0;
+  z-index: 10;
+  .p-submenu-list {
+    z-index: 100 !important;
+  }
+}
+
+.p-datepicker,
+p-calendar.p-datepicker {
+  z-index: 1001 !important;
+  transform-origin: center bottom !important;
+  top: -180px !important;
+  //left: -100px !important;
+  height: 22rem !important;
+  overflow: auto !important;
+}
+
+.p-link:focus {
+  box-shadow: none !important;
+}
+
+.p-button.p-button-icon-only.p-button-rounded {
+  background-color: #66a4c2 !important;
+}
+
+$blue: #79d1f1;
+$green: #79d1f1;
+$blue-darken: #79d1f1;
+$green-darken: #79d1f1;
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+  overflow-y: scroll;
+  background: #79d1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #66a4c2;
+  border-radius: 1rem;
+  &:hover {
+    width: 0.5rem;
+  }
+}
+
+.breadcrumb {
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: transparent;
+  display: inline-block;
+
+  margin-left: 2.3rem;
+  margin-top: 1.5rem;
+
+  li {
+    float: left;
+    margin-top: 0.5rem;
+    margin-left: -1.3rem;
+
+    a {
+      color: white;
+      display: block;
+      background: $blue;
+      text-decoration: none;
+      position: relative;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 0.5rem 0 0.5rem;
+      text-align: center;
+      margin-right: 23px;
+    }
+    span {
+      color: white;
+      display: block;
+      background: $blue;
+      text-decoration: none;
+      position: relative;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 0.5rem 0 0.5rem;
+      text-align: center;
+      margin-right: 23px;
+    }
+    &:nth-child(even) {
+      a {
+        background-color: $blue-darken;
+
+        &::before {
+          border-color: $blue-darken;
+          border-left-color: transparent;
+        }
+        &::after {
+          border-left-color: $blue-darken;
+        }
+        &:hover {
+          background-color: #91daf5;
+          &::after {
+            border-left-color: #91daf5;
+          }
+          &::before {
+            border-right-color: #91daf5;
+            border-top-color: #91daf5;
+            border-bottom-color: #91daf5;
+          }
+        }
+      }
+    }
+    &:first-child {
+      a {
+        padding-left: 1rem;
+        border-radius: 0.5rem 0 0 0.5rem;
+
+        &:before {
+          border: none;
+        }
+        &:hover {
+          background-color: #91daf5;
+          &::after {
+            border-left-color: #91daf5;
+          }
+          &::before {
+            border-right-color: #91daf5;
+            border-top-color: #91daf5;
+            border-bottom-color: #91daf5;
+          }
+        }
+      }
+    }
+    &:last-child {
+      a {
+        padding-right: 1rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+
+        &::after {
+          border: none;
+        }
+      }
+      span {
+        padding-right: 1rem;
+        cursor: pointer;
+
+        border-radius: 0 0.5rem 0.5rem 0;
+
+        &::after {
+          border: none;
+        }
+        &:hover {
+          &::before {
+            border-right-color: #91daf5;
+            border-top-color: #91daf5;
+            border-bottom-color: #91daf5;
+          }
+          background-color: #91daf5;
+        }
+      }
+    }
+    &:last-child:active {
+      margin-left: -1.4rem;
+      text-align: center;
+
+      a {
+        text-align: center;
+        padding-right: 1rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+
+        &::after {
+          border: none;
+        }
+      }
+      span {
+        text-align: center;
+        padding-right: 1rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+
+        &::after {
+          border: none;
+        }
+      }
+    }
+
+    a {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 0 solid $blue;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
+      }
+      &::before {
+        left: -20px;
+        border-left-color: transparent;
+      }
+      &::after {
+        left: 100%;
+        border-color: transparent;
+        border-left-color: $blue;
+      }
+      &:hover {
+        background-color: $green;
+
+        &::before {
+          border-color: $green;
+          border-left-color: transparent;
+        }
+        &::after {
+          border-left-color: $green;
+        }
+      }
+
+      &:active {
+        background-color: $green-darken;
+
+        &::before {
+          border-color: $green-darken;
+          border-left-color: transparent;
+        }
+        &::after {
+          border-left-color: $green-darken;
+        }
+      }
+    }
+    span {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 0 solid $blue;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
+      }
+      &::before {
+        left: -20px;
+        border-left-color: transparent;
+      }
+      &::after {
+        left: 100%;
+        border-color: transparent;
+        border-left-color: $blue;
+      }
+      &:hover {
+        background-color: $green;
+
+        &::before {
+          border-color: $green;
+          border-left-color: transparent;
+        }
+        &::after {
+          border-left-color: $green;
+        }
+      }
+
+      &:active {
+        background-color: $green-darken;
+
+        &::before {
+          border-color: $green-darken;
+          border-left-color: transparent;
+        }
+        &::after {
+          border-left-color: $green-darken;
+        }
+      }
+    }
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
